@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>xyz.mlserver.spigot-update</groupId>
+        <groupId>xyz.mlserver.spigot.update</groupId>
         <artifactId>parent</artifactId>
         <version>parent</version>
     </parent>
@@ -15,7 +15,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>xyz.mlserver.spigot-update</groupId>
+            <groupId>xyz.mlserver.spigot.update</groupId>
             <artifactId>core</artifactId>
             <version>${s-update.version}</version>
         </dependency>
