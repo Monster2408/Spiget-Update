@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>xyz.mlserver.spiget-update</groupId>
+        <artifactId>parent</artifactId>
+        <version>parent</version>
+    </parent>
+
+    <artifactId>bukkit</artifactId>
+    <version>${s-update.version}</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>xyz.mlserver.spiget-update</groupId>
+            <artifactId>core</artifactId>
+            <version>${s-update.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>bukkit</artifactId>
+            <version>1.9-R0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</project>
