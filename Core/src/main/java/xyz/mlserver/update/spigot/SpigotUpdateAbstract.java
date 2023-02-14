@@ -11,7 +11,7 @@ import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public abstract class spigotUpdateAbstract {
+public abstract class SpigotUpdateAbstract {
 
 	public static final String RESOURCE_INFO    = "http://api.spigot.org/v2/resources/%s?ut=%s";
 	public static final String RESOURCE_VERSION = "http://api.spigot.org/v2/resources/%s/versions/latest?ut=%s";
@@ -24,13 +24,13 @@ public abstract class spigotUpdateAbstract {
 
 	protected ResourceInfo latestResourceInfo;
 
-	public spigotUpdateAbstract(int resourceId, String currentVersion, Logger log) {
+	public SpigotUpdateAbstract(int resourceId, String currentVersion, Logger log) {
 		this.resourceId = resourceId;
 		this.currentVersion = currentVersion;
 		this.log = log;
 	}
 
-	public spigotUpdateAbstract setUserAgent(String userAgent) {
+	public SpigotUpdateAbstract setUserAgent(String userAgent) {
 		this.userAgent = userAgent;
 		return this;
 	}
@@ -39,7 +39,7 @@ public abstract class spigotUpdateAbstract {
 		return userAgent;
 	}
 
-	public spigotUpdateAbstract setVersionComparator(VersionComparator comparator) {
+	public SpigotUpdateAbstract setVersionComparator(VersionComparator comparator) {
 		this.versionComparator = comparator;
 		return this;
 	}

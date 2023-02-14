@@ -1,11 +1,11 @@
-package xyz.mlserver.update.spiget;
+package xyz.mlserver.update.spigot;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
-import xyz.mlserver.update.spiget.comparator.VersionComparator;
-import xyz.mlserver.update.spiget.download.DownloadCallback;
-import xyz.mlserver.update.spiget.download.UpdateDownloader;
+import xyz.mlserver.update.spigot.comparator.VersionComparator;
+import xyz.mlserver.update.spigot.download.DownloadCallback;
+import xyz.mlserver.update.spigot.download.UpdateDownloader;
 
 import java.io.File;
 import java.io.FileReader;
@@ -23,7 +23,7 @@ public class SpigotUpdate extends SpigotUpdateAbstract {
     public SpigotUpdate(Plugin plugin, int resourceId) {
         super(resourceId, plugin.getDescription().getVersion(), plugin.getLogger());
         this.plugin = plugin;
-        setUserAgent("SpigetResourceUpdater/Bukkit");
+        setUserAgent("spigotResourceUpdater/Bukkit");
     }
 
     @Override
@@ -100,13 +100,13 @@ public class SpigotUpdate extends SpigotUpdateAbstract {
     }
 
     public Properties getUpdaterProperties() {
-        File file = new File(Bukkit.getUpdateFolderFile(), "spiget.properties");
+        File file = new File(Bukkit.getUpdateFolderFile(), "spigot.properties");
         Properties properties = new Properties();
         if (!file.exists()) {
             try {
                 if (!file.createNewFile()) { return null; }
                 properties.setProperty("externalDownloads", "false");
-                properties.store(new FileWriter(file), "Configuration for the Spiget auto-updater. https://spiget.org | https://github.com/InventivetalentDev/SpigotUpdater\n"
+                properties.store(new FileWriter(file), "Configuration for the spigot auto-updater. https://spigot.org | https://github.com/InventivetalentDev/SpigotUpdater\n"
                         + "Use 'externalDownloads' if you want to auto-download resources hosted on external sites\n"
                         + "");
             } catch (Exception ignored) {
