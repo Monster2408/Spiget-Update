@@ -15,25 +15,25 @@ import java.lang.reflect.Method;
 import java.util.Properties;
 import java.util.logging.Level;
 
-public class SpigetUpdate extends SpigetUpdateAbstract {
+public class SpigotUpdate extends SpigotUpdateAbstract {
 
     protected final Plugin plugin;
     protected DownloadFailReason failReason = DownloadFailReason.UNKNOWN;
 
-    public SpigetUpdate(Plugin plugin, int resourceId) {
+    public SpigotUpdate(Plugin plugin, int resourceId) {
         super(resourceId, plugin.getDescription().getVersion(), plugin.getLogger());
         this.plugin = plugin;
         setUserAgent("SpigetResourceUpdater/Bukkit");
     }
 
     @Override
-    public SpigetUpdate setUserAgent(String userAgent) {
+    public SpigotUpdate setUserAgent(String userAgent) {
         super.setUserAgent(userAgent);
         return this;
     }
 
     @Override
-    public SpigetUpdate setVersionComparator(VersionComparator comparator) {
+    public SpigotUpdate setVersionComparator(VersionComparator comparator) {
         super.setVersionComparator(comparator);
         return this;
     }
@@ -79,16 +79,16 @@ public class SpigetUpdate extends SpigetUpdateAbstract {
             return false;
         }
 
-        log.info("[SpigetUpdate] Downloading update...");
+        log.info("[SpigotUpdate] Downloading update...");
         dispatch(UpdateDownloader.downloadAsync(latestResourceInfo, updateFile, getUserAgent(), new DownloadCallback() {
             @Override
             public void finished() {
-                log.info("[SpigetUpdate] Update saved as " + updateFile.getPath());
+                log.info("[SpigotUpdate] Update saved as " + updateFile.getPath());
             }
 
             @Override
             public void error(Exception exception) {
-                log.log(Level.WARNING, "[SpigetUpdate] Could not download update", exception);
+                log.log(Level.WARNING, "[SpigotUpdate] Could not download update", exception);
             }
         }));
 
@@ -106,7 +106,7 @@ public class SpigetUpdate extends SpigetUpdateAbstract {
             try {
                 if (!file.createNewFile()) { return null; }
                 properties.setProperty("externalDownloads", "false");
-                properties.store(new FileWriter(file), "Configuration for the Spiget auto-updater. https://spiget.org | https://github.com/InventivetalentDev/SpigetUpdater\n"
+                properties.store(new FileWriter(file), "Configuration for the Spiget auto-updater. https://spiget.org | https://github.com/InventivetalentDev/SpigotUpdater\n"
                         + "Use 'externalDownloads' if you want to auto-download resources hosted on external sites\n"
                         + "");
             } catch (Exception ignored) {

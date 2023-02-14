@@ -1,11 +1,11 @@
-package xyz.mlserver.update.spiget;
+package xyz.mlserver.update.spigot;
 
 public interface UpdateCallback {
 
 	/**
 	 * Called when a new version was found
 	 * <p>
-	 * Use {@link SpigetUpdateAbstract#getLatestResourceInfo()} to get all resource details
+	 * Use {@link spigotUpdateAbstract#getLatestResourceInfo()} to get all resource details
 	 *
 	 * @param newVersion      the new version's name
 	 * @param downloadUrl     URL to download the update

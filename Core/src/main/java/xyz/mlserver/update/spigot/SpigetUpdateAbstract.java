@@ -1,9 +1,9 @@
-package xyz.mlserver.update.spiget;
+package xyz.mlserver.update.spigot;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import xyz.mlserver.update.spiget.comparator.VersionComparator;
+import xyz.mlserver.update.spigot.comparator.VersionComparator;
 
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -11,26 +11,26 @@ import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public abstract class SpigetUpdateAbstract {
+public abstract class spigotUpdateAbstract {
 
-	public static final String RESOURCE_INFO    = "http://api.spiget.org/v2/resources/%s?ut=%s";
-	public static final String RESOURCE_VERSION = "http://api.spiget.org/v2/resources/%s/versions/latest?ut=%s";
+	public static final String RESOURCE_INFO    = "http://api.spigot.org/v2/resources/%s?ut=%s";
+	public static final String RESOURCE_VERSION = "http://api.spigot.org/v2/resources/%s/versions/latest?ut=%s";
 
 	protected final int    resourceId;
 	protected final String currentVersion;
 	protected final Logger log;
-	protected String            userAgent         = "SpigetResourceUpdater";
+	protected String            userAgent         = "spigotResourceUpdater";
 	protected VersionComparator versionComparator = VersionComparator.EQUAL;
 
 	protected ResourceInfo latestResourceInfo;
 
-	public SpigetUpdateAbstract(int resourceId, String currentVersion, Logger log) {
+	public spigotUpdateAbstract(int resourceId, String currentVersion, Logger log) {
 		this.resourceId = resourceId;
 		this.currentVersion = currentVersion;
 		this.log = log;
 	}
 
-	public SpigetUpdateAbstract setUserAgent(String userAgent) {
+	public spigotUpdateAbstract setUserAgent(String userAgent) {
 		this.userAgent = userAgent;
 		return this;
 	}
@@ -39,7 +39,7 @@ public abstract class SpigetUpdateAbstract {
 		return userAgent;
 	}
 
-	public SpigetUpdateAbstract setVersionComparator(VersionComparator comparator) {
+	public spigotUpdateAbstract setVersionComparator(VersionComparator comparator) {
 		this.versionComparator = comparator;
 		return this;
 	}
@@ -75,7 +75,7 @@ public abstract class SpigetUpdateAbstract {
 						callback.upToDate();
 					}
 				} catch (Exception e) {
-					log.log(Level.WARNING, "Failed to get resource info from spiget.org", e);
+					log.log(Level.WARNING, "Failed to get resource info from spigot.org", e);
 				}
 			}
 		});

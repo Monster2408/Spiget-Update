@@ -1,4 +1,4 @@
-package xyz.mlserver.update.spiget.comparator;
+package xyz.mlserver.update.spigot.comparator;
 
 public abstract class VersionComparator {
 
@@ -27,7 +27,7 @@ public abstract class VersionComparator {
 
 				return check > current;
 			} catch (NumberFormatException e) {
-				System.err.println("[SpigetUpdate] Invalid SemVer versions specified [" + currentVersion + "] [" + checkVersion + "]");
+				System.err.println("[spigotUpdate] Invalid SemVer versions specified [" + currentVersion + "] [" + checkVersion + "]");
 			}
 			return false;
 		}

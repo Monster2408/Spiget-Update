@@ -1,6 +1,6 @@
-package xyz.mlserver.update.spiget.download;
+package xyz.mlserver.update.spigot.download;
 
-import xyz.mlserver.update.spiget.ResourceInfo;
+import xyz.mlserver.update.spigot.ResourceInfo;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -12,7 +12,7 @@ import java.nio.channels.ReadableByteChannel;
 
 public class UpdateDownloader {
 
-	public static final String RESOURCE_DOWNLOAD = "http://api.spiget.org/v2/resources/%s/download";
+	public static final String RESOURCE_DOWNLOAD = "http://api.spigot.org/v2/resources/%s/download";
 
 	public static Runnable downloadAsync(final ResourceInfo info, final File file, final String userAgent, final DownloadCallback callback) {
 		return new Runnable() {

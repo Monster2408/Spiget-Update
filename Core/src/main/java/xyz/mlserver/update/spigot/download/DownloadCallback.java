@@ -1,4 +1,4 @@
-package xyz.mlserver.update.spiget.download;
+package xyz.mlserver.update.spigot.download;
 
 public interface DownloadCallback {
 

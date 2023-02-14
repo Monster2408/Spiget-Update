@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>xyz.mlserver.spiget-update</groupId>
+        <groupId>xyz.mlserver.spigot-update</groupId>
         <artifactId>parent</artifactId>
         <version>parent</version>
     </parent>

@@ -1,4 +1,4 @@
-package xyz.mlserver.update.spiget;
+package xyz.mlserver.update.spigot;
 
 public class ResourceVersion {
 
