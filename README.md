@@ -1,11 +1,11 @@
 # Minecraft用
 
-[![](https://jitpack.io/v/xyz.mlserver/ReflectionHelper.svg)](https://jitpack.io/#xyz.mlserver/ReflectionHelper)
+[![](https://jitpack.io/v/xyz.mlserver/Spigot-Update.svg)](https://jitpack.io/#xyz.mlserver/Spigot-Update)
 [![Twitter](https://badgen.net/twitter/follow/monster_2408?icon=twitter)](https://twitter.com/monster_2408)
 [![Discord](https://discord.com/api/guilds/556844677115150366/widget.png)](https://discord.mlserver.xyz)
 [Website](https://monster2408.com)
 
-[Java Docs](https://docs.mlserver.jp/ReflectionHelper/)
+[Java Docs](https://docs.mlserver.jp/Spigot-Update/)
 
 ```xml
 <project>
