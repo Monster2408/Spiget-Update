@@ -41,7 +41,7 @@
                         <link rel="icon" type="image/png" href="https://docs.mlserver.jp/img/android-touch-icon.png" sizes="192x192">
                     ]]></top>
                     <additionalJOptions>--allow-script-in-comments</additionalJOptions>
-                    <stylesheetfile>${basedir}/src/main/resources/javadoc/stylesheet.css</stylesheetfile>
+                    <stylesheetfile>${basedir}/stylesheets/javadoc/stylesheet.css</stylesheetfile>
                 </configuration>
             </plugin>
             <plugin>
